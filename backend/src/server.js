@@ -20,6 +20,13 @@ app.use(
   })
 );
 
+app.get("/", (request, response) => {
+  ///server to client
+  response.json({
+    message: "Server is running " + PORT,
+  });
+});
+
 app.use(express.json());
 app.use(cookieParser());
 
