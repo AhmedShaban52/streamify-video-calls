@@ -11,7 +11,7 @@ import chatRoutes from "./routes/chat.route.js";
 import { connectDB } from "./lib/db.js";
 
 const app = express();
-const PORT = 5001 || process.env.PORT;
+const PORT = 5001 || process.env.PORT || 5001;
 
 app.use(
   cors({
