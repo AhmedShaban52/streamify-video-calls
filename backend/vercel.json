@@ -1,16 +1,20 @@
 {
-    "version" : 2,
-    "name" : "Streamify",
-    "builds" : [
-        {
-            "src" : "./src/server.js",
-            "use" : "@vercel/node"
-        }
-    ],
-    "routes" : [
-        {
-            "src" : "/(.*)",
-            "dest" : "/"
-        }
-    ]
-}     
+  "version": 2,
+  "name": "Streamify",
+  "builds": [
+    {
+      "src": "./src/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/src/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/src/server.js"
+    }
+  ]
+}
