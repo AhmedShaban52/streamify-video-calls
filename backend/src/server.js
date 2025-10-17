@@ -11,7 +11,6 @@ import chatRoutes from "./routes/chat.route.js";
 import { connectDB } from "./lib/db.js";
 
 const app = express();
-const PORT = 5001 || process.env.PORT || 5001;
 
 app.use(
   cors({
@@ -19,6 +18,8 @@ app.use(
     credentials: true, // allow frontend to send cookies
   })
 );
+
+const PORT = 5001 || process.env.PORT || 5001;
 
 app.get("/", (request, response) => {
   ///server to client
